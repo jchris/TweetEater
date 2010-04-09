@@ -1,14 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Generated CouchApp</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css">
-  </head>
-  <body>
-    <h1>Generated CouchApp</h1>
-    <p>This is a placeholder page</p>
-  </body>
-  <script src="/_utils/script/json2.js"></script>
-  <script src="/_utils/script/jquery.js?1.3.1"></script>
-  <script src="/_utils/script/jquery.couch.js?0.9.0"></script>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <title></title>
+  <link rel="stylesheet" href="style/reset.css" type="text/css" media="screen" charset="utf-8"/>  
+  <link rel="stylesheet" href="style/main.css" type="text/css" media="screen" charset="utf-8"/>
+</head>
+<body id='index'>
+	<div id='header'>
+		<h1></h1>
+		<p id='attribution'>
+		  created by <a target='_blank' href='http://twitter.com/doppler'>@doppler</a> - 
+		  powered by 
+		  <a target='_blank' href='http://twitter.com/couchdb'>@CouchDB</a> 
+		  <a target='_blank' href='http://couchdb.apache.org/'><img src='/favicon.ico' width='16px' height='16px' valign='middle' /></a>
+		</p>
+	</div>
+  <div id='tweets'>
+  </div>
+</body>
+<script src="/_utils/script/json2.js"></script>
+<script src="/_utils/script/jquery.js?1.3.1"></script>
+<script src="/_utils/script/jquery.couch.js?0.9.0"></script>
+<script src="vendor/couchapp/jquery.couch.app.js"></script> 
+<script src="vendor/couchapp/jquery.couch.app.util.js"></script> 
+<script src="vendor/couchapp/jquery.evently.js"></script> 
+<script src="vendor/couchapp/jquery.mustache.js"></script> 
+<script src="script/app.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $.couch.app(function(app){
+    $('title, h1').html(app.ddoc.couchapp.name);
+    $('#tweets').evently(app.ddoc.evently.tweets, app);
+  });
+</script>

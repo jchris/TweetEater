@@ -1,0 +1,6 @@
+{
+  "view" : "tweet_id",
+  "descending" : true,
+  "limit" : 50,
+  "type" : "newRows"
+}

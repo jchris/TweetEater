@@ -19,9 +19,15 @@ cat > .couchapprc
 
 (now edit _attachments/bin/tweeteater-config.yml)
 
+<pre><code>couchapp push</code></pre>
+
 ## Run
 
 <pre><code>ruby _attachments/bin/tweeteater.rb</code></pre>
+
+Now view your app at
+
+<pre><code>http://localhost:5984/tweeteater/_design/tweeteater/index.html</code></pre>
 
 ## TODO
 

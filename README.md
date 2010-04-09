@@ -15,15 +15,11 @@ cat > .couchapprc
 
 *that last line means hit **CTRL-C***
 
-<pre><code>cp _attachments/bin/tweeteater-config.example.yml _attachments/bin/tweeteater-config.yml</code></pre>
-
-(now edit _attachments/bin/tweeteater-config.yml)
-
 <pre><code>couchapp push</code></pre>
 
 ## Run
 
-<pre><code>ruby _attachments/bin/tweeteater.rb</code></pre>
+<pre><code>ruby _attachments/bin/tweeteater.rb -d database_url -u username -p password -t 'terms,to,track'</code></pre>
 
 Now view your app at
 

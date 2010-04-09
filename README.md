@@ -8,20 +8,20 @@ CouchDB >= 0.10.0, couchapp, Ruby, Rubygems: tweetstream, couchrest
 
 ## Install
 
-cd TweetEater
+<pre><code>cd TweetEater
 cat > .couchapprc
 {"env":{"default":{"db":"http://user:pass@localhost:5984/tweetstream"}}}
-^C
+^C</code></pre>
 
 *that last line means hit **CTRL-C***
 
-cp _attachments/bin/tweeteater-config.example.yml _attachments/bin/tweeteater-config.yml
+<pre><code>cp _attachments/bin/tweeteater-config.example.yml _attachments/bin/tweeteater-config.yml</code></pre>
 
 (now edit _attachments/bin/tweeteater-config.yml)
 
 ## Run
 
-ruby _attachments/bin/tweeteater.rb
+<pre><code>ruby _attachments/bin/tweeteater.rb</code></pre>
 
 ## TODO
 

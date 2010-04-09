@@ -1,0 +1,9 @@
+development: &DEV
+  database_url: http://you:yourpassword@localhost:5984/tweetstream
+  twitter_username: aValidTwitterUsername
+  twitter_password: aValidTwitterPassword
+  twitter_track_terms: "test,change,nowplaying"
+
+production:
+  *DEV
+  

@@ -1,0 +1,23 @@
+<doctype html>
+<html>
+  <head>
+    <title>tweets</title>
+  </head>
+  <body>
+    <h1>Tweets</h1>
+    <ul>
+      {{#tweets}}
+        <li class='tweet' id='{{id}}'>
+          <img class='profile' src='{{avatar}}' align='left' width='36' />
+          <h3 class='screen_name'>
+            <a target='_blank' class='user' href='http://twitter.com/{{screen_name}}'>{{screen_name}}  
+            ({{name}})</a>
+          </h3>
+          <p class='text'>{{text}}</p>
+          <span class='created_at'>{{created_at}}</span>
+          <br class='clear'>
+        </li>
+      {{/tweets}}
+    </ul>
+  </body>
+</html>

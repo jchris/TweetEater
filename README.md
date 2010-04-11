@@ -6,6 +6,8 @@ TweetEater is a CouchDB application which displays tweets which are harvested fr
 
 CouchDB >= 0.10.0, couchapp, Ruby, Rubygems: tweetstream, couchrest
 
+The Ruby branch also requires [Matt Lyon's Ruby Query Server](http://github.com/mattly/couchdb-ruby-query-server)
+
 ## Install
 
     cd TweetEater
@@ -24,6 +26,10 @@ CouchDB >= 0.10.0, couchapp, Ruby, Rubygems: tweetstream, couchrest
 Now view your app at
 
     http://localhost:5984/tweeteater/_design/tweeteater/index.html
+
+You can also see a list function which uses server-side Mustache to render Tweets as HTML.
+
+    http://localhost:5984/tweeteater/_design/tweeteater/_list/tweets/tweet_id?limit=10
 
 ## TODO
 
